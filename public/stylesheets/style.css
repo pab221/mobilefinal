@@ -1,8 +1,70 @@
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: darkslategrey;
 }
 
 a {
   color: #00B7FF;
+}
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  width:50%;
+  font-size:600%
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.btn-group{
+  width:100%
+}
+h1,h2{
+  font-size: 600%;
+  text-align: center;
+  color:white;
+  position:relative
+}
+h2{
+  font-size:500%
+}
+#current {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#current td, #current th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width:50%;
+  color:white;
+  font-size:500%;
+  text-align:center;
+}
+
+
+#current th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }

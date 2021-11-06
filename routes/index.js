@@ -6,5 +6,9 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Front Page' });
 });
+router.get('/user/:user/weather', function(req, res, next) {
+  res.render('weather', { title: 'Front Page' });
+});
+
 
 module.exports = router;

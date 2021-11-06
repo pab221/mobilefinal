@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/weather.js')
+  body
+    block content
+    div(class="btn-group")
+        button(type="button") Weather
+        button(type="button") News
+        
+    div(class="btn-group")
+        
+        button(type="button") Sports 
+        button(type="button") Settings
+    
+    h1 Current Weather
+    img(id="cImg" style="width:75%;height:auto;display: block;  margin-left: auto;  margin-right: auto;")
+    
+    h2(id="cDes",style="text-transform: capitalize;")
+    table( id= "current")
+        tr
+            td Temperature 
+            td(id="cTemp")
+        tr
+            td Feels Like
+            td(id="cFeel")
+        tr
+            td Humidity
+            td(id="cHum")
+        tr
+            td Wind Speed
+            td(id="cWind")     
+    h1 Daily Forecast
+    h2(id="woop")
+
+
+
+    
