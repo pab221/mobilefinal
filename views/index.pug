@@ -1,18 +1,29 @@
-extends layout
-
-block content
-  h1= title
-  .ui.green.button#create
-    |   Create Post
-  br
-  br
-  .ui.blue.button#read
-    |   Read Post
-  br
-  br
-  .ui.orange.button#update
-    |   Update Post
-  br
-  br
-  .ui.red.button#destroy
-    |   Destroy Post
+doctype html
+html
+  head
+    title= "One App"
+    
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/main.js')
+  body
+    block content
+    h1 Welcome to OneApp
+    div(class="formclass")
+      h1 LOGIN
+      form(action="")
+        label Username
+        input(type="text",id="luser",name="luser")
+        label Password
+        input(type="password",id="lpass")
+        button(type="button") Login
+    h3 OR
+    div(class="formclass")
+      h1 Register
+      form(action="")
+        label Username
+        input(type="text",id="ruser",name="luser")
+        label Password
+        input(type="password",id="rpass1")
+        label Confirm Password
+        input(type="password",id="rpass2")
+        button(type="button") Register

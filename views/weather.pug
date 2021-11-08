@@ -17,10 +17,11 @@ html
         button(type="button") Settings
     
     h1 Current Weather
-    img(id="cImg" style="width:75%;height:auto;display: block;  margin-left: auto;  margin-right: auto;")
+    div(class="imgDiv")
+        img(id="cImg")
     
     h2(id="cDes",style="text-transform: capitalize;")
-    table( id= "current")
+    table( class= "current")
         tr
             td Temperature 
             td(id="cTemp")
@@ -33,8 +34,31 @@ html
         tr
             td Wind Speed
             td(id="cWind")     
-    h1 Daily Forecast
-    h2(id="woop")
+    h1(id="dh",onclick="showDaily();") Daily Forecast &#9660
+    div(id="dailyDiv",style="display:none")
+        -for(var x = 0;x<8;x++)
+            h2(id=x+"Date")
+            h2(id=x+"Des")
+            div(class="imgDiv")
+                img(id=x+"Img",class="dImg")
+            table( class= "current")
+                tr
+                    td Temperature High
+                    td(id=x+"TempH")
+                tr
+                    td Temperature Low
+                    td(id=x+"TempL")
+                tr
+                    td Humidity
+                    td(id=x+"Hum")
+                tr
+                    td Wind Speed
+                    td(id=x+"Wind")
+            br
+            br
+            br
+          
+
 
 
 
