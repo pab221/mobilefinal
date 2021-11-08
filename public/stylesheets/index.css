@@ -1,0 +1,58 @@
+input{
+    font-size: 400%;
+    width:100%
+    
+  }
+  .formclass{
+    margin: auto;
+    width: 50%;
+    border: 1px solid #ddd;
+    padding:10%
+    
+    
+    
+  
+  }
+  button{
+    width :50%;
+    transform: translate(50%,0);
+    font-size: 400%;
+    margin-top:10px;
+    color:white;
+    background-color: transparent;
+    border-color: white;
+  }
+  h3{
+    font-size:400%;
+    text-align: center;
+    color:white;
+    position:relative
+  }
+  body {
+  
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: darkslategrey;
+  }
+  h1,h2{
+    font-size: 600%;
+    text-align: center;
+    color:white;
+    position:relative
+  }
+  h2{
+    font-size:500%;
+    border-width:100%;
+    border: 1px solid #ddd;
+    
+    margin:0;
+    
+    text-transform: capitalize
+  }
+  label{
+    color:white;
+    font-size:400%;
+    text-align: center;
+    display: block;
+    
+  
+  }
