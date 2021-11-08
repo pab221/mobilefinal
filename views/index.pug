@@ -10,16 +10,18 @@ html
     h1 Welcome to OneApp
     div(class="formclass")
       h1 LOGIN
-      form(action="")
+      form(action="http://localhost:3000/login/",method="post")
         label Username
-        input(type="text",id="luser",name="luser",autocomplete="off")
+        input(type="text",id="ruser",name="Username",autocomplete="off")
         label Password
-        input(type="password",id="lpass",autocomplete="off")
-        button(type="button",onclick="window.location.href='http://localhost:3000/user/'+luser.value+'/weather'") Login
+        input(type="password",id="rpass",name="Password",autocomplete="off")
+        
+
+        button(type="submit") Login
     h3 OR
     div(class="formclass")
       h1 Register
-      form(action="http://localhost:3000/user",method="post")
+      form(action="http://localhost:3000/register",method="post")
         label Username
         input(type="text",id="ruser",name="Username",autocomplete="off")
         label Password

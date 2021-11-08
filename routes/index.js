@@ -20,7 +20,8 @@ router.get('/user', function(req, res, next) {
   })
 });
 
-router.post('/user',function(req, res, next) {//post for /films
+
+router.post('/register',function(req, res, next) {//post for /films
   console.log(req.body)
   if (!req.body.Username){
     res.render('user',{response:"Username Not Long Enough"})
@@ -60,5 +61,25 @@ router.post('/user',function(req, res, next) {//post for /films
   
 
 })
+router.post('/login', function(req, res, next) {
+  console.log(req.body)
+  User.find(function(err,users){ //gets all films in collection
+    if(err){
+      res.status(500).send(err);
+    }
+    for(i=0;i<users.length;i++){
+      if ((users[i].Username==req.body.Username)&(users[i].Password==req.body.Password)){
+        res.render('user',{response:"Success",user:req.body.Username})
+      }
+      else if ((users[i].Username==req.body.Username)&(users[i].Password!=req.body.Password)){
+        res.render('user',{response:"Username and Password Do Not Match"})
+      }
+
+      
+    }
+
+res.render('user',{response:"Username Does Not Exist"})
+  })
+});
 
 module.exports = router;
