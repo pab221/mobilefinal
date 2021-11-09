@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css')
+    link(rel='stylesheet', href='/stylesheets/news.css')
+    script(src='/javascripts/news.js')
+  body
+    block content
+        
+        div(class="btn-group")
+            button(type="button",onclick="window.location.href = window.location.href.replace('news','weather')" ) Weather
+            button(type="button",onclick="window.location.href = window.location.href.replace('news','news')" ) News
+            
+        div(class="btn-group")
+            button(type="button") Sports 
+            button(type="button") Settings
+        
+        
+        each val in Interests 
+                h1(style="text-transform:capitalize",onclick="showDiv("+val+");",id=val)=val+ " ▼"
+                div(id=val+"Div",style="display:none")
+                    -for(i=0;i<20;i++)
+                        div(class="articleDiv")
+                            h2(id=val+i+"title")
+                            img(id=val+i+"img",src="")
+                            p(id=val+i+"content")
+                            a(id=val+i+"lnk",class="link")
+                    
+

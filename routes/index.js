@@ -2,6 +2,7 @@ const express = require('express');
 const User = require('../models/User.js');
 const router = express.Router();
 const bodyParser = require('body-parser');
+const { exists } = require('../models/User.js');
 router.use(bodyParser.json())
 
 /* GET home page. */
@@ -10,6 +11,23 @@ router.get('/', function(req, res, next) {
 });
 router.get('/user/:user/weather', function(req, res, next) {
   res.render('weather', { title: 'Weather' });
+});
+router.get('/user/:user/news', function(req, res, next) {
+  User.find(function(err,users){ //gets all films in collection
+    if(err){
+      res.status(500).send(err);
+    }
+    else{
+    for(i=0;i<users.length;i++){
+      if (users[i].Username==req.params.user){
+        res.render('news', { title: 'News',Interests:users[i].Interests });
+        
+      }
+    }
+    res.render('user',{response:"Username Does Not Exist"})
+    }
+  })
+  
 });
 router.get('/user', function(req, res, next) {
   User.find(function(err,users){ //gets all films in collection
@@ -51,6 +69,7 @@ router.post('/register',function(req, res, next) {//post for /films
     var usr = new User();
     usr.Username = req.body.Username;
     usr.Password = req.body.pass1;
+    usr.Interests=["news"]
     usr.save();
     // res.status(200).json(usr);
     res.render('user',{response:"Success",user:req.body.Username})

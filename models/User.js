@@ -15,9 +15,7 @@ Locations:[
         Latitude:Number
     }
 ],
-Interests:[{
-    Name:String
-}
+Interests:[String
 ],
 Teams:[{
     Name:String,
