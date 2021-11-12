@@ -19,7 +19,8 @@ Interests:[String
 ],
 Teams:[{
     Name:String,
-    Id:Number
+    Id:Number,
+    Logo:String
 }]
 
 

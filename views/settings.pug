@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title= "One App"
+    
+    link(rel='stylesheet', href='/stylesheets/settings.css')
+    script(src='/javascripts/settings.js')
+  body
+    block content
+    
+    
+    div(class="formclass")
+      h1 Settings
+      form(action="http://localhost:3000/update",method="post",id="frm")
+        h2 Interests
+        div(class="divy")
+          label(class="check") Business
+              input(type="checkbox",name="business",id="business")
+              br
+          label(class="check") Entertainment
+              input(type="checkbox",name="entertainment",id="entertainment")
+              br
+          label(class="check") General
+              input(type="checkbox",name="general",id="general")
+              br
+          label(class="check") Health
+              input(type="checkbox",name="health",id="health")
+              br
+          label(class="check") Science
+              input(type="checkbox",name="science",id="science")
+              br
+          label(class="check") Sports
+              input(type="checkbox",name="sports",id="sports")
+              br
+          label(class="check") Technology
+              input(type="checkbox",name="technology",id="technology")
+              br
+        
+        h2 Teams
+        div(id="woop",class="divy")
+        label Password:
+            br
+            input(type="password",id="rpass",name="Password",autocomplete="off")
+            
+        
+
+        button(type="submit") Login
+    

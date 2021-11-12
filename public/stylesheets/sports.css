@@ -1,0 +1,115 @@
+body {
+  
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: darkslategrey;
+  }
+  
+ 
+  .btn-group button {
+    background-color: #298F85; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    width:50%;
+    font-size:600%
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+  .btn-group{
+    width:100%
+  }
+  h1,h2{
+    font-size: 600%;
+    text-align: center;
+    color:white;
+    position:relative
+  }
+  h2{
+    font-size:500%;
+    border-width:100%;
+    border: 1px solid #ddd;
+    
+    margin:0;
+    
+    text-transform: capitalize
+  }
+  h1{
+      color:white;
+      text-decoration: underline;
+      width: 100%;
+      font-size:800%
+  }
+  
+  
+  img{
+    width:100%;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+  }
+  .dImg{
+    width:25%;
+  }
+  .current{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .current td, .current th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width:50%;
+    color:white;
+    font-size:500%;
+    text-align:center;
+  }
+  .imgDiv{
+    border-width:100%;
+    border: 1px solid #ddd;
+    
+    margin:0;
+  }
+  
+  
+p{
+    color:white;
+    border-width:100%;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-bottom: none;
+    margin:0;
+    font-size:300%
+
+}
+.link {
+    color: #00B7FF;
+    border-width:100%;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-top: none;
+    margin:0;
+    font-size: 400%;
+    display: block;
+  }
+  a{
+    color: #00B7FF;
+  }
+  

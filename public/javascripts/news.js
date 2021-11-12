@@ -46,25 +46,7 @@ window.onload = function () {
             }
         });
     }
-    if(document.getElementById("news")!=null){
-        
-        
-        fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=c76b7fe1d985495689a24c57d1ffd6df&category="+"").then(response => response.json())
-        .then(function(data){
-            
-            for(i=0;i<20;i++){
-                document.getElementById("news"+i+"title").innerHTML=data.articles[i].title
-                
-                if(data.articles[i].urlToImage!=null){
-                document.getElementById("news"+i+"img").src=data.articles[i].urlToImage
-                }
-                document.getElementById("news"+i+"content").innerHTML=data.articles[i].description
-                document.getElementById("news"+i+"lnk").innerHTML="Read More"
-                document.getElementById("news"+i+"lnk").href=data.articles[i].url
-                
-            }
-        });
-    }
+    
     if(document.getElementById("entertainment")!=null){
         
         

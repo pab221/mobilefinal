@@ -1,0 +1,75 @@
+
+ 
+  button{
+    width :50%;
+    transform: translate(50%,0);
+    font-size: 400%;
+    margin-top:10px;
+    color:white;
+    background-color: transparent;
+    border-color: white;
+  }
+  h3{
+    font-size:400%;
+    text-align: center;
+    color:white;
+    position:relative
+  }
+  body {
+  
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: darkslategrey;
+  }
+  h1,h2{
+    font-size: 600%;
+    text-align: center;
+    color:white;
+    position:relative
+  }
+  h2{
+    font-size:500%;
+    border-width:75%;
+    border: 1px solid #ddd;
+    
+    margin:0;
+    
+    text-transform: capitalize
+  }
+  
+input[type="checkbox"]{
+    font-size: 500%;
+    
+    -ms-transform: scale(5); /* IE */
+    -moz-transform: scale(5); /* FF */
+    -webkit-transform: scale(5); /* Safari and Chrome */
+    -o-transform: scale(5); /* Opera */
+    transform: scale(5),;
+    margin-left:3%;
+    
+    
+    
+    
+    
+  }
+  label{
+      color:white;
+      font-size: 450%;
+      display: block;
+      text-align: center;
+      margin-bottom: 5%;
+  }
+  input[type="password"]{
+    font-size: 100%;
+    
+  }
+  .divy{
+    margin: auto;
+    width: 75%;
+    border: 1px solid #ddd;
+    padding:10%
+
+  }
+    
+    
+    
+    
