@@ -1,14 +1,5 @@
 
  
-  button{
-    width :50%;
-    transform: translate(50%,0);
-    font-size: 400%;
-    margin-top:10px;
-    color:white;
-    background-color: transparent;
-    border-color: white;
-  }
   h3{
     font-size:400%;
     text-align: center;
@@ -51,6 +42,15 @@ input[type="checkbox"]{
     
     
   }
+  button[type="submit"]{
+    width :50%;
+    transform: translate(50%,0);
+    font-size: 400%;
+    margin-top:10px;
+    color:white;
+    background-color: transparent;
+    border-color: white;
+  }
   label{
       color:white;
       font-size: 450%;
@@ -69,7 +69,45 @@ input[type="checkbox"]{
     padding:10%
 
   }
+  .teams,#interests{
     
-    
-    
-    
+    display: none;
+  }
+  .league{
+    display:none;
+    margin: auto;
+    width: 75%;
+    border: 1px solid #ddd;
+    padding:10%
+
+  }
+
+  .btn-group button {
+    background-color: #298F85; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    width:50%;
+    font-size:600%
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+  .btn-group{
+    width:100%
+  }

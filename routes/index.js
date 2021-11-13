@@ -10,14 +10,65 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Front Page' });
 });
 router.get('/user/:user/weather', function(req, res, next) {
-  res.render('weather', { title: 'Weather' });
+  User.findOne({"Username":req.params.user},function(err,user){ //gets all films in collection
+    if(err){
+      res.status(500).send(err);
+    }
+  else if(!user){
+    res.render('user',{response:"Username Does Not Exist"})
+    
+  }
+  else{
+
+    res.render('weather', { title: 'Weather'});
+    
+
+
+  }
+
+  })
 });
 
 router.get('/user/:user/sports', function(req, res, next) {
-  res.render('sports', { title: 'Sports' });
+  
+  User.findOne({"Username":req.params.user},function(err,user){ //gets all films in collection
+    if(err){
+      res.status(500).send(err);
+    }
+  else if(!user){
+    res.render('user',{response:"Username Does Not Exist"})
+    
+  }
+  else{
+
+    res.render('sports', { title: 'Sports',teams:user.Teams });
+    
+
+
+  }
+
+  })
+  
 });
 router.get('/user/:user/settings', function(req, res, next) {
-  res.render('settings', { title: 'Settings' });
+  User.findOne({"Username":req.params.user},function(err,user){ //gets all films in collection
+    if(err){
+      res.status(500).send(err);
+    }
+  else if(!user){
+    res.render('user',{response:"Username Does Not Exist"})
+    
+  }
+  else{
+    
+    console.log(user.Interests)
+    res.render('settings', { title: 'Settings',teams:user.Teams,interests:user.Interests});
+
+
+  }
+
+  })
+  
 });
 router.post('/update', function(req, res, next) {
   User.findOne({"Username":req.body.Username,"Password":req.body.Password},function(err,user){ //gets all films in collection
@@ -25,7 +76,8 @@ router.post('/update', function(req, res, next) {
       res.status(500).send(err);
     }
   else if(!user){
-    res.send("Username and Password Do Not Match")
+    res.render('update',{response:"Username and Password Do Not Match",user:req.body.Username})
+    //res.send("Username and Password Do Not Match")
   }
   else{
     Interests=["business","entertainment","general","health","science","sports","technology"]
@@ -62,7 +114,8 @@ router.post('/update', function(req, res, next) {
     user.Interests=ints
     user.Teams=teams
     user.save();
-    res.send(user)
+    //    res.send(user)
+    res.render('update',{response:"Success",user:req.body.Username})
 
   }
 
@@ -86,14 +139,14 @@ router.get('/user/:user/news', function(req, res, next) {
   })
   
 });
-router.get('/user', function(req, res, next) {
-  User.find(function(err,users){ //gets all films in collection
-    if(err){
-      res.status(500).send(err);
-    }
-  res.send(users)
-  })
-});
+// router.get('/user', function(req, res, next) {
+//   User.find(function(err,users){ //gets all films in collection
+//     if(err){
+//       res.status(500).send(err);
+//     }
+//   res.send(users)
+//   })
+// });
 
 
 router.post('/register',function(req, res, next) {//post for /films
@@ -127,6 +180,11 @@ router.post('/register',function(req, res, next) {//post for /films
     usr.Username = req.body.Username;
     usr.Password = req.body.pass1;
     usr.Interests=["general"]
+    usr.Teams=[{
+      Name:"Atlanta Braves",
+      Id:135268,
+      Logo:"https://www.thesportsdb.com/images/media/team/badge/yjs76e1617811496.png"
+    }]
     usr.save();
     // res.status(200).json(usr);
     res.render('user',{response:"Success",user:req.body.Username})

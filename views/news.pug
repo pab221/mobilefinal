@@ -13,8 +13,8 @@ html
             button(type="button",onclick="window.location.href = window.location.href.replace('news','news')" ) News
             
         div(class="btn-group")
-            button(type="button") Sports 
-            button(type="button") Settings
+            button(type="button",onclick="window.location.href = window.location.href.replace('news','sports')") Sports 
+            button(type="button",onclick="window.location.href = window.location.href.replace('news','settings')") Settings
         
         
         each val in Interests 
@@ -25,6 +25,6 @@ html
                             h2(id=val+i+"title")
                             img(id=val+i+"img",src="")
                             p(id=val+i+"content")
-                            a(id=val+i+"lnk",class="link")
+                            a(id=val+i+"lnk",class="link",target="_blank")
                     
 

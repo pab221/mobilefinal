@@ -12,5 +12,14 @@ html
         
     div(class="btn-group")
         
-        button(type="button") Sports 
-        button(type="button") Settings
+        button(type="button",onclick="window.location.href = window.location.href.replace('sports','sports')") Sports 
+        button(type="button",onclick="window.location.href = window.location.href.replace('sports','settings')") Settings
+    h1 Sports
+    each t in teams 
+      div(onclick='showDiv('+'"h'+t.Id+'",'+'"'+t.Id+'");')
+        h2(id="h"+t.Id)= t.Name+" ▼"
+        div(class="imgDiv")
+          img(src=t.Logo+"/preview",class="logo")
+      div(class="teams",id=t.Id)
+
+  

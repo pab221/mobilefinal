@@ -7,13 +7,21 @@ html
     script(src='/javascripts/settings.js')
   body
     block content
+    div(class="btn-group")
+        button(type="button",onclick="window.location.href = window.location.href.replace('settings','weather')") Weather
+        button(type="button",onclick="window.location.href = window.location.href.replace('settings','news')") News
+        
+    div(class="btn-group")
+        
+        button(type="button",onclick="window.location.href = window.location.href.replace('settings','sports')") Sports 
+        button(type="button",onclick="window.location.href = window.location.href.replace('settings','settings')") Settings
     
     
     div(class="formclass")
       h1 Settings
       form(action="http://localhost:3000/update",method="post",id="frm")
-        h2 Interests
-        div(class="divy")
+        h2(id="ints",onclick="showDiv('ints','intDiv');")="Interests ▼"
+        div(id="intDiv",class="league")
           label(class="check") Business
               input(type="checkbox",name="business",id="business")
               br
@@ -36,13 +44,26 @@ html
               input(type="checkbox",name="technology",id="technology")
               br
         
-        h2 Teams
-        div(id="woop",class="divy")
+        
+        h2(id="mlb",onclick="showDiv('mlb','MLBDiv');")="MLB ▼"
+        div(id="MLBDiv",class="league")
+            
+        h2(id="nfl",onclick="showDiv('nfl','NFLDiv');")="NFL ▼"
+        div(id="NFLDiv",class="league")
+        h2(id="nba",onclick="showDiv('nba','NBADiv');")="NBA ▼"
+        div(id="NBADiv",class="league")
+        h2(id="nhl",onclick="showDiv('nhl','NHLDiv');")="NHL ▼"
+        div(id="NHLDiv",class="league")
+        
+        
+        
         label Password:
             br
             input(type="password",id="rpass",name="Password",autocomplete="off")
             
         
 
-        button(type="submit") Login
-    
+        button(type="submit") Save
+        each t in teams
+            h1(class="teams")=t.Id
+        h1(id="interests")=interests
