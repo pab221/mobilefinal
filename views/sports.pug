@@ -15,6 +15,7 @@ html
         button(type="button",onclick="window.location.href = window.location.href.replace('sports','sports')") Sports 
         button(type="button",onclick="window.location.href = window.location.href.replace('sports','settings')") Settings
     h1 Sports
+    
     each t in teams 
       div(onclick='showDiv('+'"h'+t.Id+'",'+'"'+t.Id+'");')
         h2(id="h"+t.Id)= t.Name+" ▼"

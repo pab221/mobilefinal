@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const { exists } = require('../models/User.js');
 router.use(bodyParser.json())
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Front Page' });
@@ -123,19 +124,24 @@ router.post('/update', function(req, res, next) {
 });
 
 router.get('/user/:user/news', function(req, res, next) {
-  User.find(function(err,users){ //gets all films in collection
+  User.findOne({"Username":req.params.user},function(err,user){ //gets all films in collection
     if(err){
       res.status(500).send(err);
     }
+    else if(!user){
+      res.render('user',{response:"Username Does Not Exist"})
+    }
+    else if(req.query.search){
+      
+      res.render('search', { title: 'News',search:req.query.search});
+    }
     else{
-    for(i=0;i<users.length;i++){
-      if (users[i].Username==req.params.user){
-        res.render('news', { title: 'News',Interests:users[i].Interests });
-        
-      }
+      res.render('news', { title: 'News',Interests:user.Interests });
+
     }
-    res.render('user',{response:"Username Does Not Exist"})
-    }
+    
+    
+    
   })
   
 });

@@ -4,7 +4,7 @@ window.onload = function () {
     for(j=0;j<tms.length;j++){
         
         // teams.push(tms[j].id)
-        fetch("https://www.thesportsdb.com/api/v1/json/1/eventslast.php?id="+tms[j].id).then(response => response.json())
+        fetch("https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id="+tms[j].id).then(response => response.json())
         .then(function(data){
         
         for(i=0;i<data.results.length;i++){

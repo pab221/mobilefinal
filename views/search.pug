@@ -4,7 +4,7 @@ html
     title= title
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css')
     link(rel='stylesheet', href='/stylesheets/news.css')
-    script(src='/javascripts/news.js')
+    script(src='/javascripts/search.js')
   body
     block content
         
@@ -18,14 +18,7 @@ html
         form(action="http://localhost:3000/user/pab221/news")
           input(type="text",name="search",placeholder="Search for News...")
           button(type="submit") Search
-        each val in Interests 
-                h1(style="text-transform:capitalize",onclick="showDiv("+val+");",id=val)=val+ " ▼"
-                div(id=val+"Div",style="display:none")
-                    -for(i=0;i<20;i++)
-                        div(class="articleDiv")
-                            h2(id=val+i+"title")
-                            img(id=val+i+"img",src="")
-                            p(id=val+i+"content")
-                            a(id=val+i+"lnk",class="link",target="_blank")
-                    
-
+        h1 News
+        h2(id="search")="Search for "+search
+        div(id="all")
+        
