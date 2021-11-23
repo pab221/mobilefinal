@@ -41,3 +41,11 @@ window.onload=function(){
             }
         });
 }
+function redirect(x){
+    var s = window.location.href;
+    var i = s.indexOf('?');
+    s=s.substring(0,i);
+    s=s.replace('news',x);
+    window.location.href=s
+    
+}

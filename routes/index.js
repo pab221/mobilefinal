@@ -81,7 +81,7 @@ router.post('/update', function(req, res, next) {
     //res.send("Username and Password Do Not Match")
   }
   else{
-    Interests=["business","entertainment","general","health","science","sports","technology"]
+    Interests=["business","education","environment","film","general","politics","science","sports","technology","world"]
 
     var ints=[]
     var teams=[]

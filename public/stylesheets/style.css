@@ -1,6 +1,6 @@
 body {
   
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: .7vw "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: darkslategrey;
 }
 
@@ -9,7 +9,7 @@ a {
 }
 .btn-group button {
   background-color: #298F85; /* Green background */
-  border: 1px solid green; /* Green border */
+  border: 1px solid white; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */

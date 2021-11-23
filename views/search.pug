@@ -9,12 +9,12 @@ html
     block content
         
         div(class="btn-group")
-            button(type="button",onclick="window.location.href = window.location.href.replace('news','weather')" ) Weather
-            button(type="button",onclick="window.location.href = window.location.href.replace('news','news')" ) News
+            button(type="button",onclick="redirect('weather');" ) Weather
+            button(type="button",onclick="redirect('news');" ) News
             
         div(class="btn-group")
-            button(type="button",onclick="window.location.href = window.location.href.replace('news','sports')") Sports 
-            button(type="button",onclick="window.location.href = window.location.href.replace('news','settings')") Settings
+            button(type="button",onclick="redirect('sports');") Sports 
+            button(type="button",onclick="redirect('settings');") Settings
         form(action="http://localhost:3000/user/pab221/news")
           input(type="text",name="search",placeholder="Search for News...")
           button(type="submit") Search

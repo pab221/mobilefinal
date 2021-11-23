@@ -19,13 +19,7 @@ html
           input(type="text",name="search",placeholder="Search for News...")
           button(type="submit") Search
         each val in Interests 
-                h1(style="text-transform:capitalize",onclick="showDiv("+val+");",id=val)=val+ " ▼"
+                h1(style="text-transform:capitalize",onclick="showDiv("+val+");",id=val,class="ints")=val+ " ▼"
                 div(id=val+"Div",style="display:none")
-                    -for(i=0;i<20;i++)
-                        div(class="articleDiv")
-                            h2(id=val+i+"title")
-                            img(id=val+i+"img",src="")
-                            p(id=val+i+"content")
-                            a(id=val+i+"lnk",class="link",target="_blank")
                     
 

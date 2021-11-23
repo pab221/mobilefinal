@@ -8,7 +8,7 @@
   }
   body {
   
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: .7vw "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: darkslategrey;
   }
   h1,h2{
@@ -28,13 +28,13 @@
   }
   
 input[type="checkbox"]{
-    font-size: 500%;
     
-    -ms-transform: scale(5); /* IE */
-    -moz-transform: scale(5); /* FF */
-    -webkit-transform: scale(5); /* Safari and Chrome */
-    -o-transform: scale(5); /* Opera */
-    transform: scale(5),;
+    
+    -ms-transform: scale(4); /* IE */
+    -moz-transform: scale(4); /* FF */
+    -webkit-transform: scale(4); /* Safari and Chrome */
+    -o-transform: scale(4); /* Opera */
+    transform: scale(4),;
     margin-left:3%;
     
     
@@ -84,7 +84,7 @@ input[type="checkbox"]{
 
   .btn-group button {
     background-color: #298F85; /* Green background */
-    border: 1px solid green; /* Green border */
+    border: 1px solid white; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
