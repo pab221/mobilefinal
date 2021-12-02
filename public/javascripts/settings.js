@@ -21,7 +21,7 @@ window.onload = function () {
     x.style.visibility="hidden"
     document.getElementById("frm").appendChild(x);
 
-    fetch("https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=4424").then(response => response.json())
+    fetch("https://www.thesportsdb.com/api/v1/json/50130162/lookup_all_teams.php?id=4424").then(response => response.json())
         .then(function(data){
             
             for(i=0;i<data.teams.length;i++){
@@ -47,7 +47,7 @@ window.onload = function () {
             }
             
         });  
-        fetch("https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=4391").then(response => response.json())
+        fetch("https://www.thesportsdb.com/api/v1/json/50130162/lookup_all_teams.php?id=4391").then(response => response.json())
         .then(function(data){
             
             for(i=0;i<data.teams.length;i++){
@@ -73,7 +73,7 @@ window.onload = function () {
             }
             
         });  
-        fetch("https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=4387").then(response => response.json())
+        fetch("https://www.thesportsdb.com/api/v1/json/50130162/lookup_all_teams.php?id=4387").then(response => response.json())
         .then(function(data){
             
             for(i=0;i<data.teams.length;i++){
@@ -99,7 +99,7 @@ window.onload = function () {
             }
             
         });  
-        fetch("https://www.thesportsdb.com/api/v1/json/2/lookup_all_teams.php?id=4380").then(response => response.json())
+        fetch("https://www.thesportsdb.com/api/v1/json/50130162/lookup_all_teams.php?id=4380").then(response => response.json())
         .then(function(data){
             
             for(i=0;i<data.teams.length;i++){

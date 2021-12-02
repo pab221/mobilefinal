@@ -15,7 +15,7 @@ html
         div(class="btn-group")
             button(type="button",onclick="window.location.href = window.location.href.replace('news','sports')") Sports 
             button(type="button",onclick="window.location.href = window.location.href.replace('news','settings')") Settings
-        form(action="http://localhost:3000/user/pab221/news")
+        form(action="http://oneapp371.herokuapp.com/user/pab221/news")
           input(type="text",name="search",placeholder="Search for News...")
           button(type="submit") Search
         each val in Interests 
