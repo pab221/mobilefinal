@@ -1,19 +1,28 @@
 window.onload = function () {
-    console.log("djdjdjjdjd")
-    var x = document.getElementById("item");
+    
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
+    
+    
   } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
+    var pos = {coords:{
+      
+     latitude: 40.6097253,
+     longitude: -75.3791827,
+
+    }}
+    
+    showPosition(pos);
   }
 }
 
 function showPosition(position) {
+  // console.log(position)
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+ position.coords.latitude+"&lon="+ position.coords.longitude+"&appid=2fb0326cd4589fd5ee68d3ea9fc0c832&units=imperial").then(response => response.json())
     .then(function(data){
-        console.log(data.daily)
+        // console.log(data.daily)
         var weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         //var month = months[d.getUTCMonth()];
