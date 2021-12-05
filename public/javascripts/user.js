@@ -6,13 +6,13 @@
 window.onload = function () {
     
     if(document.getElementById("res").innerHTML=="Success"){
-        window.location.href="http://oneapp371.herokuapp.com/user/"+document.getElementById("u").innerHTML+"/weather/"
+        window.location.href="https://oneapp371.herokuapp.com/user/"+document.getElementById("u").innerHTML+"/weather/"
     }
     else{
         window.setTimeout(function(){
 
             // Move to a new location or you can do something else
-            window.location.href = "http://oneapp371.herokuapp.com";
+            window.location.href = "https://oneapp371.herokuapp.com";
         
         }, 2500);
     }
@@ -21,7 +21,7 @@ window.onload = function () {
 };
 function redirect(user){
     console.log(user)
-    window.location.href="http://oneapp371.herokuapp.com/user/"+user
+    window.location.href="https://oneapp371.herokuapp.com/user/"+user
 }
 
   
