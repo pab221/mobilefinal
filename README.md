@@ -1,13 +1,3 @@
-﻿Peter Bernard
-
-Professor Chuah
-
-CSE-371
-
-December 6, 2021
-
-OneApp
-
 The website is live at <https://oneapp371.herokuapp.com/>
 # Motivation
 `	`My motivation for this project was to create a website that would function as an everyday tool for me. I thought of three things I am interested in that do not revolve around email and other social media websites. Thus, I concluded I usually look at weather, news and sports. However, the big issue with this is that I’m constantly having to use multiple applications to do so. I have to use three websites when one is much easier. Hence, the name *OneApp.* I also got the idea for the news section from homework 1. In this project, there was a news section. However, the news was being pulled from a static database which I thought was useless because news should be new. This led me to looking into the a news api and the rest of the project. 
