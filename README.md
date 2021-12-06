@@ -8,8 +8,6 @@ The website is live at <https://oneapp371.herokuapp.com/>
 
 `	`Pug.js is a template engine that was used to develop the web pages for the website. I chose it because I have used it previously and I enjoyed the “[each](https://pugjs.org/language/iteration.html)” feature which allows you to take an array of items and create individual elements for each of them. CSS was used to style the website and make it customized for mobile use. Javascript was used to fetch data from apis as well as manipulate the web pages when they load. 
 
-`	`The 
-
 `	`Mongoose is used to simplify the connection between MongoDB and the Web Application. The database is currently hosted by Amazon Web Services using MongoDB Atlas for free. The website as a whole is hosted by Heroku, although testing was done locally. 
 # Feature 1: Weather
 The goal of this feature was to give the user weather information based on their current location. This is done by using the HTML Geolocation API to get the user’s longitude and latitude. After these numbers are collected, the [One Call API](https://openweathermap.org/api/one-call-api), a subset of the Open Weather Map API, is used to get weather data for that location. 
